@@ -10,17 +10,20 @@ const Error = () => (
                         body > div,
                         body > div > div,
                         body > div > div > div.error {
-                        height: 100%;
+                        height: 50.7em;
+                        background:#2185d0!important;
+                        color="#2145d0";
+                        scroll:nome;
                             }`}
             </style>
             <Grid textAligh="center" style={{ height: '100%' }} verticalAlign='middle' centered>
                 <Grid.Column style={{ maxWidth: 450 }} >
-                    <Segment inverted>
-                        <Header inverted as='h1' color='teal' textAlign='center'>
-                            <Image src={Sad} circular />
+                    <Segment color='blue' inverted>
+                        <Header as='h1' color='teal' textAlign='center'>
+                            <Image src={Sad} size='massive' />
                             <div>
-                                <Header inverted content='Erro 404' />
-                                <Header inverted content='Page not found!' />
+                                <Header color='blue' inverted content='Erro 404' />
+                                <Header color='blue' inverted content='Page not found!' />
                             </div>
                         </Header>
                     </Segment>
