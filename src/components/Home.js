@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import {
     Button,
     Container,
@@ -20,7 +21,7 @@ const HomepageHeading = ({ mobile }) => (
     <Container text>
         <Header
             as='h1'
-            content='Imagine-a-Company'
+            content='Ajude++'
             inverted
             style={{
                 fontSize: mobile ? '2em' : '4em',
@@ -31,7 +32,7 @@ const HomepageHeading = ({ mobile }) => (
         />
         <Header
             as='h2'
-            content='Do whatever you want when you want to.'
+            content='Faça diferença! Ajude!'
             inverted
             style={{
                 fontSize: mobile ? '1.5em' : '1.7em',
@@ -73,18 +74,21 @@ class DesktopContainer extends Component {
                 >
                     <Segment
                         inverted
+                        color="blue"
                         textAlign='center'
                         style={{ minHeight: 700, padding: '1em 0em' }}
                         vertical
                     >
                         <Menu
                             fixed={fixed ? 'top' : null}
-                            inverted={!fixed}
+
+
                             pointing={!fixed}
-                            secondary={!fixed}
+
                             size='large'
                         >
                             <Container>
+
                                 <Menu.Item as='a' active>
                                     Home
                 </Menu.Item>
@@ -92,16 +96,18 @@ class DesktopContainer extends Component {
                                 <Menu.Item as='a'>Company</Menu.Item>
                                 <Menu.Item as='a'>Careers</Menu.Item>
                                 <Menu.Item position='right'>
-                                    <a href='./Login.js'>
-                                        <Button as='a' inverted={!fixed}>
+                                    <Link to='/Login'>
+                                        <Button as='a' >
                                             Login
-                  </Button>
-                                    </a>
+                                        </Button>
+                                    </Link>
 
-                                    <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
+                                    <Button as='a' primary={fixed} style={{ marginLeft: '0.5em' }}>
                                         Sign Up
-                  </Button>
+                                        </Button>
                                 </Menu.Item>
+
+
                             </Container>
                         </Menu>
                         <HomepageHeading />
@@ -109,7 +115,7 @@ class DesktopContainer extends Component {
                 </Visibility>
 
                 {children}
-            </Responsive>
+            </Responsive >
         )
     }
 }
@@ -268,7 +274,7 @@ const HomepageLayout = () => (
                     horizontal
                     style={{ margin: '3em 0em', textTransform: 'uppercase' }}
                 >
-                    <a href='#'>Case Studies</a>
+                    <a href='/'>Case Studies</a>
                 </Divider>
                 <Header as='h3' style={{ fontSize: '2em' }}>
                     Did We Tell You About Our Bananas?
@@ -283,7 +289,7 @@ const HomepageLayout = () => (
         </Button>
             </Container>
         </Segment>
-        <Segment inverted vertical style={{ padding: '5em 0em' }}>
+        <Segment inverted color="blue" vertical style={{ padding: '5em 0em' }}>
             <Container>
                 <Grid divided inverted stackable>
                     <Grid.Row>

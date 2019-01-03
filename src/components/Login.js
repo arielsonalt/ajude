@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
-
+import { Link } from 'react-router-dom'
+import imgLogin from '../img/login.png'
 const LoginForm = () => (
     <div className='login-form'>
         {/*
@@ -12,13 +13,14 @@ const LoginForm = () => (
       body > div,
       body > div > div,
       body > div > div > div.login-form {
-        height: 100%;
+        height: 50.8em;
+        background:#2185d0!important;
       }
     `}</style>
         <Grid textAlign='center' style={{ height: '100%' }} verticalAlign='middle'>
             <Grid.Column style={{ maxWidth: 450 }}>
-                <Header as='h2' color='teal' textAlign='center'>
-                    <Image src='/logo.png' /> Log-in to your account
+                <Header as='h2' inverted textAlign='center'>
+                    <Image src={imgLogin} /> Log-in to your account
         </Header>
                 <Form size='large'>
                     <Segment stacked>
@@ -37,7 +39,7 @@ const LoginForm = () => (
                     </Segment>
                 </Form>
                 <Message>
-                    New to us? <a href='#'>Sign Up</a>
+                    New to us? <Link to='/'>Sign Up</Link>
                 </Message>
             </Grid.Column>
         </Grid>
