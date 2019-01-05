@@ -2,13 +2,10 @@ import React from 'react'
 import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import imgLogin from '../img/login.png'
+
+
 const LoginForm = () => (
     <div className='login-form'>
-        {/*
-      Heads up! The styles below are necessary for the correct render of this example.
-      You can do same with CSS, the main idea is that all the elements up to the `Grid`
-      below must have a height of 100%.
-    */}
         <style>{`
       body > div,
       body > div > div,
