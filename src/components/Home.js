@@ -1,23 +1,16 @@
 import PropTypes from 'prop-types'
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react'
 import { ResponsiveContainer } from './navbar/Navbar'
 import imagem from '../img/land.jpg'
 import {
-    Rail,
     Button,
     Container,
     Divider,
     Grid,
     Header,
-    Icon,
     Image,
     List,
-    Menu,
-    Responsive,
     Segment,
-    Sidebar,
-    Visibility,
 } from 'semantic-ui-react'
 
 const HomepageHeading = () => (
