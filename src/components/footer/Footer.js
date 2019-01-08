@@ -1,11 +1,8 @@
 import React from 'react'
 import {
-    Button,
     Container,
-    Divider,
     Grid,
     Header,
-    Image,
     List,
     Segment,
 } from 'semantic-ui-react'
@@ -35,10 +32,10 @@ const Footer = () => (
                     <Grid.Column width={7}>
                         <Header as='h4' inverted>
                             Footer Header
-      </Header>
+                        </Header>
                         <p>
                             Extra space for a call to action inside the footer that could help re-engage users.
-      </p>
+                            </p>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>

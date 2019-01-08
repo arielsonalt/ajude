@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Erro from './components/Error';
 import Sobre from './components/Sobre';
+import { Cadastro } from './components/cadastro';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
             <Route path='/' component={Home} exact />
             <Route path='/Login' component={Login} />
             <Route path='/Sobre' component={Sobre} />
+            <Route path='/Cadastro' component={Cadastro} />
             <Route path="*" component={Erro} />
           </Switch>
         </BrowserRouter>
