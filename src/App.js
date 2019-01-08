@@ -6,7 +6,7 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Erro from './components/Error';
 import Sobre from './components/Sobre';
-import { Cadastro } from './components/cadastro';
+import { Cadastro } from './components/Cadastro';
 
 class App extends Component {
   render() {
