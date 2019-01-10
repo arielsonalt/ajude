@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import ModalAluno from '../cadastro/ModalAluno'
 import {
     Button,
     Container,
@@ -13,13 +14,17 @@ import {
     Visibility,
 } from 'semantic-ui-react'
 export class DesktopContainer extends Component {
-    state = {}
+    state = { open: false }
 
     hideFixedMenu = () => this.setState({ fixed: false })
     showFixedMenu = () => this.setState({ fixed: true })
+    show = () => this.setState({ open: true })
+    close = () => this.setState({ open: false })
 
     render() {
         const { fixed } = this.state
+        const { open } = this.state
+        const { close } = this.props;
         return (
             <Grid centered>
                 <div style={styles.menu}>
@@ -43,17 +48,24 @@ export class DesktopContainer extends Component {
                                     size='large'
                                 >
                                     <Container>
-                                        <Menu.Item as='a' active>Home</Menu.Item>
-                                        <Menu.Item as='a'>Work</Menu.Item>
+                                        <Menu.Item ><Link to='/' ><div style={{ margin: '0.2em' }}>Home</div></Link></Menu.Item>
+                                        {/*<Menu.Item as='a'>Work</Menu.Item>
                                         <Menu.Item as='a'>Company</Menu.Item>
-                                        <Menu.Item as='a'>Careers</Menu.Item>
+                                        <Menu.Item as='a'>Careers</Menu.Item>*/}
                                         <Menu.Item position='right'>
                                             <Link to='/Login'>
                                                 <Button label='Login' />
                                             </Link>
-                                            <Button as='a' primary={fixed} style={{ marginLeft: '0.5em' }}>
-                                                Sign Up
+                                            <Link to=''>
+                                                <Button
+                                                    primary={fixed}
+                                                    style={{ marginLeft: '0.5em' }}
+                                                    onClick={() => { this.show() }}
+                                                >
+                                                    Sign Up
                                             </Button>
+                                            </Link>
+                                            <ModalAluno show={this.show} open={this.state.open} close={this.close} />
                                         </Menu.Item>
                                     </Container>
                                 </Menu>
@@ -61,7 +73,7 @@ export class DesktopContainer extends Component {
                         </Visibility>
                     </Responsive >
                 </div>
-            </Grid>
+            </Grid >
         )
     }
 }

@@ -4,11 +4,18 @@ import { Container, Segment, Header } from 'semantic-ui-react'
 export class Cadastro extends Component {
     render() {
         return (
-            <Container>
-                <Segment inverted color='blue'>
-                    <Header>oi</Header>
+
+            <Container style={{ backgrond: 'blue', minWidght: "100%" }}>
+
+                <Segment
+                    inverted
+                    color='blue'
+                >
+                    <Header></Header>
                 </Segment>
+
             </Container>
+
         );
     }
 }

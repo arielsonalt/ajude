@@ -22,20 +22,12 @@ const LoginForm = () => (
                     <Image src={imgLogin} /> Log-in to your account
         </Header>
                 <Form size='large'>
-                    <Segment stacked>
-                        <Form.Field>
-                            <Radio
-                                label='Instituição de Ensino'
-                                name='radioGroup'
-                                value='Ensino'
-                            />
+                    <Segment stacked textAlign="left">
+                        <Form.Field >
+                            <input type="radio" name='radioGroup' value="Ensino" /> Instituição de Ensino<br />
                         </Form.Field>
                         <Form.Field>
-                            <Radio
-                                label='Instituição Beneficente'
-                                name='radioGroup'
-                                value='Beneficente'
-                            />
+                            <input type="radio" name='radioGroup' value='Beneficente' /> Instituição Beneficente<br />
                         </Form.Field>
                         <Form.Input fluid icon='user' iconPosition='left' placeholder='E-mail address' />
                         <Form.Input
