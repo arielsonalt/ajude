@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Container, Segment, Header } from 'semantic-ui-react'
 
-export class CadastroBeneficente extends Component {
+export class CadastroServidor extends Component {
     render() {
         return (
 

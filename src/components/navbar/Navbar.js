@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import ModalAluno from '../cadastro/ModalAluno'
+import ModalAluno from '../cadastro/modals/ModalAluno'
 import {
     Button,
     Container,
@@ -23,8 +23,6 @@ export class DesktopContainer extends Component {
 
     render() {
         const { fixed } = this.state
-        const { open } = this.state
-        const { close } = this.props;
         return (
             <Grid centered>
                 <div style={styles.menu}>
@@ -56,15 +54,14 @@ export class DesktopContainer extends Component {
                                             <Link to='/Login'>
                                                 <Button label='Login' />
                                             </Link>
-                                            <Link to=''>
-                                                <Button
-                                                    primary={fixed}
-                                                    style={{ marginLeft: '0.5em' }}
-                                                    onClick={() => { this.show() }}
-                                                >
-                                                    Sign Up
+
+                                            <Button
+                                                primary={fixed}
+                                                style={{ marginLeft: '0.5em' }}
+                                                onClick={() => { this.show() }}
+                                            >
+                                                Sign Up
                                             </Button>
-                                            </Link>
                                             <ModalAluno show={this.show} open={this.state.open} close={this.close} />
                                         </Menu.Item>
                                     </Container>

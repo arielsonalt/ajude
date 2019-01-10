@@ -37,18 +37,12 @@ HomepageHeading.propTypes = {
     mobile: PropTypes.bool,
 }
 
-/* Heads up!
- * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
- * It can be more complicated, but you can create really flexible markup.
- */
-
 const HomepageLayout = () => (
     <div>
         <ResponsiveContainer />
         <Image src={imagem} style={{ size: "100%" }} centered />
         <HomepageHeading />
         <Segment inverted color='blue' style={{ padding: '6em 0em', background: '#eeeeee' }} vertical>
-
             <Grid container stackable verticalAlign='middle'>
                 <Grid.Row>
                     <Grid.Column width={8}>

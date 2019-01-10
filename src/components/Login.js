@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Form, Grid, Header, Image, Segment, Message, Radio } from 'semantic-ui-react'
+import { Button, Form, Grid, Header, Image, Segment, Message } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import imgLogin from '../img/login.png'
 

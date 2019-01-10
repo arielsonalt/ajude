@@ -6,7 +6,12 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Erro from './components/Error';
 import Sobre from './components/Sobre';
-import { TipoCadastro } from './components/cadastro/TipoCadastro'
+import { CadastroAluno } from './components/cadastro/CadastroAluno';
+import { CadastroBeneficente } from './components/cadastro/CadastroBeneficente';
+import { CadastroEnsino } from './components/cadastro/CadastroEnsino';
+import { CadastroFuncionario } from './components/cadastro/CadastroFuncionario';
+import { CadastroServidor } from './components/cadastro/CadastroServidor';
+
 
 class App extends Component {
   render() {
@@ -17,7 +22,11 @@ class App extends Component {
             <Route path='/' component={Home} exact />
             <Route path='/Login' component={Login} />
             <Route path='/Sobre' component={Sobre} />
-            <Route path='/TipoCadastro' component={TipoCadastro} />
+            <Route path='/CadastroAluno' component={CadastroAluno} />
+            <Route path='/CadastroBeneficente' component={CadastroBeneficente} />
+            <Route path='/CadastroEnsino' component={CadastroEnsino} />
+            <Route path='/CadastroFuncionario' component={CadastroFuncionario} />
+            <Route path='/CadastroServidor' component={CadastroServidor} />
             <Route path="*" component={Erro} />
           </Switch>
         </BrowserRouter>
