@@ -14,8 +14,6 @@ import {
 export class CadastroAluno extends Component {
     render() {
         return (
-
-
             <div className='login-form'>
                 <style>
                     {

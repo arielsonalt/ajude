@@ -40,10 +40,9 @@ HomepageHeading.propTypes = {
 const HomepageLayout = () => (
     <div>
         <ResponsiveContainer />
-        <Image src={imagem} style={{ size: "100%" }} centered />
         <HomepageHeading />
         <Segment inverted color='blue' style={{ padding: '6em 0em', background: '#eeeeee' }} vertical>
-            <Grid container stackable verticalAlign='middle'>
+            <Grid container stackable verticalAlign='middle' style={{ paddingTop: '10em' }}>
                 <Grid.Row>
                     <Grid.Column width={8}>
                         <Header as='h3' style={{ fontSize: '2em' }}>

@@ -11,6 +11,7 @@ import { CadastroBeneficente } from './components/cadastro/CadastroBeneficente';
 import { CadastroEnsino } from './components/cadastro/CadastroEnsino';
 import { CadastroFuncionario } from './components/cadastro/CadastroFuncionario';
 import { CadastroServidor } from './components/cadastro/CadastroServidor';
+import { AreaFuncinarioBeneficente } from './components/area/AreaFuncionarioBeneficente'
 
 
 class App extends Component {
@@ -27,6 +28,7 @@ class App extends Component {
             <Route path='/CadastroEnsino' component={CadastroEnsino} />
             <Route path='/CadastroFuncionario' component={CadastroFuncionario} />
             <Route path='/CadastroServidor' component={CadastroServidor} />
+            <Route path='/AreaFuncinarioBeneficente' component={AreaFuncinarioBeneficente} />
             <Route path="*" component={Erro} />
           </Switch>
         </BrowserRouter>
